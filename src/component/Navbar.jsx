@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons'
+import logo from '/src/assets/logo.jpg'
 
 const Navbar = () => {
   const menuItems = [
@@ -20,17 +21,15 @@ const Navbar = () => {
 
   return (
     <div>
-      {/* 상단 바 */}
       <div className='flex justify-between p-4 bg-white shadow-md'>
-        {/* 로고 */}
         <div className='flex justify-center flex-grow'>
           <img
-            src='/src/assets/logo.jpg' // 로고 이미지 경로를 여기에 넣으세요
+            src='/src/assets/logo.jpg'
             alt='Nike Logo'
             className='h-36 transition-transform duration-300 hover:scale-105'
           />
         </div>
-        {/* 로그인 버튼 */}
+
         <div className='flex items-start w-[120px] mt-4'>
           <button className='flex items-center bg-teal-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300'>
             <FontAwesomeIcon icon={faUser} className='mr-2' />
@@ -51,7 +50,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* 메뉴 리스트 */}
       <nav className='bg-gray-100 text-gray-700 p-4 shadow-md'>
         <div className='flex justify-center space-x-8'>
           {menuItems.map((item, index) => (
