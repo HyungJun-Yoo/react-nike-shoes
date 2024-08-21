@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const apiUrl =
   process.env.NODE_ENV === 'production'
-    ? 'https://react-nike-shoes.vercel.app'
+    ? 'https://my-json-server.typicode.com/HyungJun-Yoo/react-nike-shoes'
     : 'http://localhost:3000'
 
 const ProductAll = () => {

@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className='flex justify-between p-4 bg-white shadow-md'>
         <div className='flex justify-center flex-grow'>
           <img
-            src='/src/assets/logo.jpg'
+            src={logo}
             alt='Nike Logo'
             className='h-36 transition-transform duration-300 hover:scale-105'
           />
