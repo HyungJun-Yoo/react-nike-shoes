@@ -26,6 +26,24 @@
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dcdb6246-918a-48db-a5f0-49588d3bb898/W+NIKE+ZOOM+VAPOR+PRO+2+HC+PRM.png",
       "type": "테니스",
       "target": "여성 하드 코트 테니스화"
+    },
+    {
+      "id": 4,
+      "name": "르브론 XXI EP",
+      "price": 249000,
+      "description": "르브론은 최근 농구의 제왕만이 가능한 방식으로 스니커즈 게임의 시나리오를 뒤엎었습니다. 앙코르 버전은 더욱더 감탄을 자아냅니다. 르브론 XXI는 에어 줌 쿠셔닝과 지면에 낮게 밀착되는 경량 디자인의 케이블링 시스템을 갖추고 있어 거추장스러운 무게감 없이 민첩한 유동성과 폭발력을 제공합니다. 더 높은 곳을 향하는 다음 농구 세대를 위해 탄생한 이 제품은 르브론과 같은 오픈 플로어 공격과 경기의 페이스가 빨라질 때 농구 골대를 향해 날아오르는 데 적합합니다. 이번 버전은 내구성이 뛰어난 고무 밑창으로 야외 코트에 필요한 접지력을 제공합니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d33698f6-ba64-4cb1-b934-bb0a34d956ba/LEBRON+XXI+QS+EP.png",
+      "type": "농구",
+      "target": "농구화"
+    },
+    {
+      "id": 5,
+      "name": "나이키 에어맥스 플러스",
+      "price": 219000,
+      "description": "에어맥스 플러스로 엣지있는 감각을 뽐내세요. 불꽃 같은 케이지가 스트리트에 열기를 더해 주며, 통기성 좋은 메쉬가 시원함을 유지해 줍니다. 그리고 탁월한 안정감과 놀라운 쿠셔닝을 제공하는 튠드 나이키 에어를 경험할 수 있습니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0e42ff41-41ab-42cb-b8f3-8c42d8ae0d79/NIKE+AIR+MAX+PLUS.png",
+      "type": "라이프스타일",
+      "target": "남성 신발"
     }
   ]
 }

@@ -2,8 +2,10 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons'
 import logo from '/src/assets/logo.jpg'
+import { useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ authenticate, setAuthenticate }) => {
+  const navigate = useNavigate()
   const menuItems = [
     '라이프스타일',
     '조던',
@@ -19,24 +21,58 @@ const Navbar = () => {
     '샌들 & 슬리퍼',
   ]
 
+  const handleLogout = () => {
+    setAuthenticate(false)
+    navigate('/login')
+  }
+
+  const handleMenu = () => {
+    navigate('/')
+  }
+
   return (
     <div>
-      <div className='flex justify-between p-4 bg-white shadow-md'>
-        <div className='flex justify-center flex-grow'>
+      <div className='flex justify-between p-4 bg-black shadow-md'>
+        <div
+          onClick={() => navigate('/')}
+          className='flex justify-center items-center relative cursor-pointer'
+        >
           <img
             src={logo}
             alt='Nike Logo'
             className='h-36 transition-transform duration-300 hover:scale-105'
           />
+          <h1 className='text-white text-3xl font-bold absolute right-[-100px]'>
+            NIKE-SHOES
+          </h1>
         </div>
 
-        <div className='flex items-start w-[120px] mt-4'>
+        <div
+          onClick={
+            authenticate ? () => handleLogout() : () => navigate('login')
+          }
+          className='flex items-center w-[120px]'
+        >
           <button className='flex items-center bg-teal-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300'>
             <FontAwesomeIcon icon={faUser} className='mr-2' />
-            로그인
+            <span>{authenticate ? '로그아웃' : '로그인'}</span>
           </button>
         </div>
       </div>
+
+      <nav className='sm:flex sm:justify-center w-full p-4 shadow-md'>
+        <div className='max-w-[1280px] grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center'>
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className='text-base sm:text-lg font-semibold hover:text-teal-500 transition-colors duration-300 cursor-pointer p-2 rounded hover:bg-teal-50'
+              onClick={() => handleMenu()}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </nav>
 
       <div className='flex justify-center m-4 mr-[120px]'>
         <input
@@ -49,20 +85,6 @@ const Navbar = () => {
           검색
         </button>
       </div>
-
-      <nav className='bg-gray-100 text-gray-700 p-4 shadow-md'>
-        <div className='flex justify-center space-x-8'>
-          {menuItems.map((item, index) => (
-            <a
-              key={index}
-              href={`#${item}`}
-              className='text-lg font-semibold hover:text-teal-500 transition-colors duration-300'
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-      </nav>
     </div>
   )
 }
