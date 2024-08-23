@@ -139,26 +139,6 @@
       "type": "러닝",
       "simple": "로드 레이싱화",
       "choice": true
-    },
-    {
-      "id": 15,
-      "name": "조던 맥스 아우라 6",
-      "price": 159000,
-      "description": "모든 날에 적합합니다. 맥스 아우라 6는 그 어떤 날에도 어울리도록 제작되었습니다. 퀼팅 갑피, 독보적인 스타일의 중창, 숨겨진 아일릿 등 AJ14의 최고의 요소들을 재해석해 편안한 쿠셔닝을 중시하는 새로운 디자인에 녹여내었습니다. AJ14 점프맨 마크로 마무리하여 룩에 품격을 더합니다.",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ef150417-903a-4375-a274-c27653feebdd/JORDAN+MAX+AURA+6.png",
-      "type": "조던",
-      "simple": "남성 신발",
-      "choice": true
-    },
-    {
-      "id": 16,
-      "name": "사브리나 2 EP",
-      "price": 159000,
-      "description": "사브리나 이오네스쿠의 성공에는 특별한 비결이 없습니다. 그녀의 실력은 체육관에서 살면서 훈련을 반복해 기술을 완성하는 데서 나옵니다. 사브리나 2는 더 많은 걸 해내도록 도와줍니다. 그래서 경기 시간이 되면 곧바로 경기에 나갈 수 있죠. 나이키의 최신 쿠쉴론 폼이 산뜻함을 유지해 주고, 에어 줌 쿠셔닝이 탄력을 더하며, 점착성 좋은 접지력 덕분에 한 차원 높은 수준의 비거리를 달성할 수 있습니다. 사브리나가 이 아이템을 여러분에게 건넵니다. 이제 경기를 시작할 시간입니다. 이번 버전은 내구성이 뛰어난 고무 밑창으로 야외 코트에 필요한 접지력을 제공합니다.",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fc9dd308-177d-4cb2-aae0-4d19674885e1/SABRINA+2+EP.png",
-      "type": "농구",
-      "simple": "농구화",
-      "choice": false
     }
   ]
 }
