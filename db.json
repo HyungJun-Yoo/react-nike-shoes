@@ -119,26 +119,6 @@
       "type": "스케이트보딩",
       "simple": "남성 신발",
       "choice": false
-    },
-    {
-      "id": 13,
-      "name": "필드 제너럴 '82 SP",
-      "price": 119000,
-      "description": "투지 넘치는 미식축구 문화에 뿌리를 둔 필드 제너럴 '82가 돌아와 스니커즈계를 뒤흔듭니다. 천공 처리된 매끄러운 가죽 소재가 클래식한 화이트 앤 블랙 컬러와 근사한 조화를 이루며, 돌기가 있는 와플 아웃솔은 검 라이트 브라운 컬러로 마감되었습니다. 필드 제너럴의 이 스페셜 에디션은 미식축구계 아이콘의 영광을 스트리트에서 재현합니다.",
-      "image": "https://static.nike.com/a/images/t_prod_ss/w_480,c_limit,f_auto,q_auto/fcdf7f42-727b-4ea8-b771-d887371e5c16/%ED%95%84%EB%93%9C-%EC%A0%9C%EB%84%88%EB%9F%B4-82-sp-white-and-black-hf5603-101-%EC%B6%9C%EC%8B%9C%EC%9D%BC.jpg",
-      "type": "미식축구",
-      "simple": "White and Black",
-      "choice": false
-    },
-    {
-      "id": 14,
-      "name": "나이키 스트릭플라이",
-      "price": 189000,
-      "description": "나이키 사상 가장 가벼운 레이싱화인 나이키 스트릭플라이는 마일 런, 5K 및 10K 레이스 등 어떤 승부에서든 최고의 속도를 발휘할 수 있게 해줍니다. 날렵한 디테일을 적용한 로우 프로파일 디자인으로, 개인 최고 기록을 향한 여정에서 마치 신발을 신지 않은 듯한 착화감을 선사해 지면과 하나된 듯한 일체감을 느낄 수 있습니다.",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7ebd7237-b670-4133-8335-0d4fa3964c05/NIKE+ZOOMX+STREAKFLY.png",
-      "type": "러닝",
-      "simple": "로드 레이싱화",
-      "choice": true
     }
   ]
 }
