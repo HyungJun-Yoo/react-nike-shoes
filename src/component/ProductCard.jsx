@@ -10,7 +10,11 @@ const ProductCard = ({ item }) => {
   return (
     <div
       key={item.id}
-      className='border border-gray-300 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 bg-white cursor-pointer'
+      className={`min-w-[300px] border ${
+        item.choice
+          ? 'border-pastel_blue shadow-lg shadow-pastel_blue transition-transform duration-300 transform'
+          : 'border-gray-300'
+      } rounded-lg overflow-hidden transition-shadow duration-300 bg-white cursor-pointer`}
       onClick={() => showProduct(item.id)}
     >
       <img

@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faSearch } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUser,
+  faSearch,
+  faBars,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons'
 import logo from '/src/assets/logo.jpg'
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
+  const [searchKeyword, setSearchKeyword] = useState('')
+  const [menuOpen, setMenuOpen] = useState(false) // 메뉴 열림 상태
   const navigate = useNavigate()
   const menuItems = [
     '라이프스타일',
     '조던',
     '러닝',
     '농구',
-    '트레이닝 및 짐',
+    '트레이닝',
     '축구',
     '스케이트보딩',
     '미식축구',
@@ -28,6 +35,16 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
   const handleMenu = () => {
     navigate('/')
+  }
+
+  const handleSearch = () => {
+    navigate(`/?q=${searchKeyword}`)
+  }
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch()
+    }
   }
 
   return (
@@ -60,7 +77,39 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         </div>
       </div>
 
-      <nav className='sm:flex sm:justify-center w-full p-4 shadow-md'>
+      {/* 모바일 메뉴 버튼 */}
+      <div className='bg-black sm:hidden'>
+        <button onClick={() => setMenuOpen(!menuOpen)}>
+          <FontAwesomeIcon
+            icon={menuOpen ? faTimes : faBars}
+            className='text-white p-4 text-3xl'
+          />
+        </button>
+      </div>
+
+      {/* 사이드바 */}
+      {menuOpen && (
+        <div className='fixed top-0 left-0 bg-white w-1/2 h-full z-10 shadow-lg flex flex-col'>
+          <button className='self-end p-2' onClick={() => setMenuOpen(false)}>
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className='text-lg font-semibold hover:text-teal-500 transition-colors duration-300 cursor-pointer p-2'
+              onClick={() => {
+                handleMenu()
+                setMenuOpen(false) // 메뉴 닫기
+              }}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* 일반 네비게이션 */}
+      <nav className='hidden sm:flex sm:justify-center w-full p-4 shadow-md'>
         <div className='max-w-[1280px] grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:justify-center'>
           {menuItems.map((item, index) => (
             <div
@@ -79,10 +128,12 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           type='text'
           placeholder='검색어를 입력하세요'
           className='border border-gray-300 rounded-l-full px-4 py-3 w-96 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition duration-200'
+          value={searchKeyword}
+          onChange={(e) => setSearchKeyword(e.target.value)}
+          onKeyDown={handleKeyPress}
         />
         <button className='flex items-center bg-teal-600 text-white px-6 py-3 rounded-r-full shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-teal-500 text-lg'>
           <FontAwesomeIcon icon={faSearch} className='mr-2' />
-          검색
         </button>
       </div>
     </div>

@@ -7,7 +7,8 @@
       "description": "에어의 모든 것을 담았습니다. 에어 모어 업템포 '96은 높이 날아오르는 농구 스타일은 그대로 유지하면서 오리지널을 새롭게 표현합니다. 그래피티에서 영감을 받은 브랜딩과 팀을 상징하는 특별한 컬러웨이 덕분에 코트 밖에서도 돋보이는 신발입니다.",
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2b3393e2-882c-43b5-b063-4f2846fb5db2/AIR+MORE+UPTEMPO+%2796.png",
       "type": "라이프스타일",
-      "target": "남성 신발"
+      "target": "남성 신발",
+      "choice": true
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "description": "빠른 속도를 추구하시나요? 최고의 축구 스타들도 마찬가지입니다. 그래서 나이키는 개선된 3/4 길이 에어 줌 유닛을 적용한 엘리트 클리트 축구화를 만들었습니다. 이 축구화는 여러분과 가장 빠른 축구 선수들에게 수비 라인을 돌파하는 데 필요한 추진력을 선사합니다. 그 결과, 본인에게서도 신발에서도 뛰어난 퍼포먼스를 기대하는 이들을 위한, 나이키 역사상 가장 반응성이 뛰어난 머큐리얼이 탄생했습니다.",
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3ddd3850-936a-490e-a645-f68df2f5d6c0/ZM+VAPOR+16+ELITE+FG.png",
       "type": "축구",
-      "target": "FG 로우 탑 클리트 축구화"
+      "target": "FG 로우 탑 클리트 축구화",
+      "choice": false
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "description": "멈추지 않는 랠리, 유리한 위치를 차지해야 하는 마라톤과도 같은 경기를 위해서라면 베이퍼 프로 2와 함께하세요. 오리지널 프로에서 누리던 모든 요소, 즉 지면에 밀착되는 디자인, 코트 양쪽 끝을 수월하게 오갈 수 있게 해 주는 탄력 있는 에어 줌 쿠셔닝을 그대로 구현했으며, 잘 알려진 베이퍼의 편안함을 선사하여 거친 지면에서도 가벼운 움직임을 유지할 수 있습니다. 이번 버전의 그래픽은 뉴욕의 전설적인 토너먼트를 오마주한 것입니다.",
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dcdb6246-918a-48db-a5f0-49588d3bb898/W+NIKE+ZOOM+VAPOR+PRO+2+HC+PRM.png",
       "type": "테니스",
-      "target": "여성 하드 코트 테니스화"
+      "target": "여성 하드 코트 테니스화",
+      "choice": false
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "description": "르브론은 최근 농구의 제왕만이 가능한 방식으로 스니커즈 게임의 시나리오를 뒤엎었습니다. 앙코르 버전은 더욱더 감탄을 자아냅니다. 르브론 XXI는 에어 줌 쿠셔닝과 지면에 낮게 밀착되는 경량 디자인의 케이블링 시스템을 갖추고 있어 거추장스러운 무게감 없이 민첩한 유동성과 폭발력을 제공합니다. 더 높은 곳을 향하는 다음 농구 세대를 위해 탄생한 이 제품은 르브론과 같은 오픈 플로어 공격과 경기의 페이스가 빨라질 때 농구 골대를 향해 날아오르는 데 적합합니다. 이번 버전은 내구성이 뛰어난 고무 밑창으로 야외 코트에 필요한 접지력을 제공합니다.",
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d33698f6-ba64-4cb1-b934-bb0a34d956ba/LEBRON+XXI+QS+EP.png",
       "type": "농구",
-      "target": "농구화"
+      "target": "농구화",
+      "choice": true
     },
     {
       "id": 5,
@@ -43,7 +47,68 @@
       "description": "에어맥스 플러스로 엣지있는 감각을 뽐내세요. 불꽃 같은 케이지가 스트리트에 열기를 더해 주며, 통기성 좋은 메쉬가 시원함을 유지해 줍니다. 그리고 탁월한 안정감과 놀라운 쿠셔닝을 제공하는 튠드 나이키 에어를 경험할 수 있습니다.",
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0e42ff41-41ab-42cb-b8f3-8c42d8ae0d79/NIKE+AIR+MAX+PLUS.png",
       "type": "라이프스타일",
-      "target": "남성 신발"
+      "target": "남성 신발",
+      "choice": true
+    },
+    {
+      "id": 6,
+      "name": "에어 조던 뮬",
+      "price": 129000,
+      "description": "잘 풀리지 않았던 라운딩을 마치고 뒤풀이하러 떠날 때든, 라운딩을 앞두고 준비할 때든 경기 전과 후 언제든 신을 수 있는 완전히 새로워진 조던 1 G 뮬로 천국과도 같은 착화감을 느껴보세요. 신고 벗기가 간편하며, 시선을 사로잡는 독특한 디자인 그리고 시대를 초월하는 조던의 정신과 편안함으로 완성되었습니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/09934c2a-7888-42b6-8554-a3a9a67eec1a/AIR+JORDAN+MULE.png",
+      "type": "조던",
+      "target": "골프화",
+      "choice": false
+    },
+    {
+      "id": 7,
+      "name": "나이키 캄",
+      "price": 59000,
+      "description": "휴식하는 날 어디를 가든 차분하고 편안한 하루를 보낼 수 있습니다. 부드러우면서도 반응성이 좋은 폼으로 제작된 이 경량 슬라이드는 스타일링이 쉽고 휴대성이 뛰어납니다. 물놀이에 최적화된 디자인으로 해변이나 수영장에서 신기 좋을 뿐만 아니라, 미니멀한 룩이 도시에서 착용해도 어울릴 만큼 고급스러운 느낌을 선사합니다. 이 신발을 신고 직접 확인해 보세요.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8397fa2b-f6b8-414f-b84b-c1f420f07f28/NIKE+CALM+SLIDE.png",
+      "type": "샌들 & 슬리퍼",
+      "target": "남성 슬라이드",
+      "choice": false
+    },
+    {
+      "id": 8,
+      "name": "나이키 에어맥스 1",
+      "price": 89000,
+      "description": "나이키 에어를 최초로 세상에 선보인 신발이 슬라이드로 재해석되었습니다. 에어맥스 제품군에 추가된 이 여름용 아이템은 검증된 쿠셔닝과 물결 모양의 디자인 라인을 고스란히 간직하고 있으며 스타일링하기도, 착용하기도 쉬운 제품입니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1045b1a0-b51c-49bb-8b00-18432e700ab9/NIKE+AIR+MAX+1+SLIDE.png",
+      "type": "샌들 & 슬리퍼",
+      "target": "남성 슬라이드",
+      "choice": true
+    },
+    {
+      "id": 9,
+      "name": "나이키 에어 줌 빅토리 투어 3 일렉트릭",
+      "price": 279000,
+      "description": "온종일 연습하는 분, 새벽에 운동하는 분을 위한 디자인으로 18홀을 다 돈 후에도 연습장을 다시 찾는 골퍼를 위한 아이템입니다. 스윙을 할 때도, 경기를 할 때도 견고하고 편안한 착용감과 비현실적인 에너지 반환력을 선사하며, 스파이크가 티에서 그린까지 탁월한 접지력을 제공합니다. 퍼팅한 공을 컵에서 꺼낸 후에도 동료들로부터 인정받을 수 있는 올드 스쿨 룩이 돋보입니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/df62ba2e-fcfc-4a28-b344-ce1364fe9cf3/AIR+ZOOM+VICTORY+TOUR+3+W+OLY.png",
+      "type": "골프",
+      "target": "골프화(와이드)",
+      "choice": false
+    },
+    {
+      "id": 10,
+      "name": "나이키 티엠포 레전드 10 엘리트",
+      "price": 269000,
+      "description": "진화를 거듭하는 전설. 새로이 탄생한 엘리트 클리트 축구화는 완전히 새로운 플라이터치 플러스 가죽으로 가공되었습니다. 천연 가죽보다 더 부드러워 발 모양에 꼭 맞으며, 비 오는 날에도 그립력이 좋은 텍스처인 올 컨디션 컨트롤을 적용해 경기의 페이스를 이끌 수 있습니다. 지금까지 그 어떤 티엠포보다 더 가볍고 날렵한 레전드 10은 수비를 뚫고 정교한 패스를 보낼 때나 빠르게 돌파해 상대를 막을 때나 필드의 모든 포지션에 적합합니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/79a34b48-19d9-4098-8e42-701690059758/LEGEND+10+ELITE+FG.png",
+      "type": "축구",
+      "target": "천연 잔디 로우 탑 클리트 축구화",
+      "choice": false
+    },
+    {
+      "id": 11,
+      "name": "나이키 메트콘 9",
+      "price": 169000,
+      "description": "운동을 하는 '이유'가 무엇이든, 메트콘 9는 그럴 만한 가치가 있게 만들어 줍니다. 메트콘 8을 업그레이드하여 더욱 커진 하이퍼리프트 플레이트와 추가된 고무 로프 랩을 선보입니다. 리프터와 크로스 트레이너 및 투지가 강한 이들을 위해 제작되었으며 세계 최고의 운동선수들의 신뢰를 받고 있는 이 신발은 매일같이 기대에 부응하며 여전히 기준이 되어 주는 제품입니다.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2a14bf14-2d2c-49a3-b168-2a8e150acb4c/NIKE+METCON+9.png",
+      "type": "트레이닝",
+      "target": "남성 운동화",
+      "choice": false
     }
   ]
 }
