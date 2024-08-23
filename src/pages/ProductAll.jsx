@@ -19,12 +19,19 @@ const ProductAll = () => {
     try {
       let response
       if (searchQuery === '' && searchCategory === '') {
-        response = await axios.get(`${apiUrl}/products`)
+        response = await axios.get(`${apiUrl}/products`, {
+          maxContentLength: 20000,
+        })
       } else if (searchQuery) {
-        response = await axios.get(`${apiUrl}/products?q=${searchQuery}`)
+        response = await axios.get(`${apiUrl}/products?q=${searchQuery}`, {
+          maxContentLength: 20000,
+        })
       } else {
         response = await axios.get(
-          `${apiUrl}/products?category=${searchCategory}`
+          `${apiUrl}/products?category=${searchCategory}`,
+          {
+            maxContentLength: 20000,
+          }
         )
       }
 
