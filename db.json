@@ -109,16 +109,6 @@
       "type": "트레이닝",
       "simple": "남성 운동화",
       "choice": false
-    },
-    {
-      "id": 12,
-      "name": "나이키 에어맥스 이샤드",
-      "price": 129000,
-      "description": "90년대의 아이코닉한 농구화에서 가져온 요소를 결합한 에어맥스 이샤드는 거친 스케이트보딩에 필요한 내구성을 모두 갖춘 신발입니다. 오리지널 이샤드 디자인을 창의적으로 재해석한 이 신발은 업그레이드된 메쉬, 노출된 나이키 에어(맥스 에어 기술 적용), 쉽게 길들일 수 있는 컵솔이 특징입니다. 이제 이 신발을 신고 스케이트보딩에 진심을 담아 보세요.",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7ae8c01b-35db-4d59-a397-3a6c1bd8e9f9/NIKE+AIR+MAX+ISHOD.png",
-      "type": "스케이트보딩",
-      "simple": "남성 신발",
-      "choice": false
     }
   ]
 }
