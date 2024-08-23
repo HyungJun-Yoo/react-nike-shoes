@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 
 const apiUrl =
   process.env.NODE_ENV === 'production'
@@ -11,6 +13,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null)
   const { id } = useParams()
   const [size, setSize] = useState(null)
+  const [count, setCount] = useState(1)
 
   const getProductDetail = async () => {
     try {
@@ -29,26 +32,38 @@ const ProductDetail = () => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   }
 
+  const handleMinus = () => {
+    if (count === 1) {
+      return
+    }
+
+    setCount((prev) => prev - 1)
+  }
+
+  const handlePlus = () => {
+    setCount((prev) => prev + 1)
+  }
+
   if (!product) return null
 
   return (
     <div className='w-full flex justify-center'>
-      <div className='w-full max-w-[1280px] flex p-4'>
-        <div className='min-w-[480px]'>
+      <div className='w-full max-w-[1280px] flex flex-col md:flex-row p-4'>
+        <div className='flex-[0_0_35%] min-w-[350px]'>
           <img
             width={480}
             height={480}
-            src={product?.image}
-            alt={product?.name}
-            className='w-full h-auto object-cover'
+            src={product.image}
+            alt={product.name}
+            className='w-full h-auto object-cover mb-8 md:mb-1'
           />
         </div>
-        <div className='flex flex-col ml-4 gap-6'>
+        <div className='flex flex-col ml-4 gap-6 min-w-[410px]'>
           <div className='flex flex-col justify-center items-center'>
-            <h1 className='text-3xl font-bold'>{product?.name}</h1>
-            <p className='text-lg text-gray-700'>{product?.target}</p>
+            <h1 className='text-3xl font-bold mb-2'>{product.name}</h1>
+            <p className='text-lg text-gray-700'>{product.simple}</p>
             <p className='text-xl font-semibold'>
-              {formatPrice(product?.price)} 원
+              {formatPrice(product.price)} 원
             </p>
           </div>
 
@@ -69,17 +84,47 @@ const ProductDetail = () => {
             </div>
           </div>
 
+          <div className='flex flex-col bg-gray-200 h-[200px] mt-8 gap-4 p-8'>
+            <div className='text-xl font-bold text-gray-600 mb-8'>
+              {product?.name}
+            </div>
+            <div className='flex justify-between items-center p-4 border-b'>
+              <div className='flex items-center space-x-2'>
+                <button
+                  onClick={() => handleMinus()}
+                  className='flex items-center justify-center w-10 h-10 text-gray-600 hover:text-gray-800 border border-gray-400 rounded'
+                >
+                  <FontAwesomeIcon icon={faMinus} />
+                </button>
+                <p className='w-20 h-10 flex items-center justify-center text-lg font-semibold border border-gray-400 rounded'>
+                  {count}
+                </p>
+                <button
+                  onClick={() => handlePlus()}
+                  className='flex items-center justify-center w-10 h-10 text-gray-600 hover:text-gray-800 border border-gray-400 rounded'
+                >
+                  <FontAwesomeIcon icon={faPlus} />
+                </button>
+              </div>
+              <div className='text-lg font-bold text-gray-800 ml-4'>
+                {formatPrice(product.price * count)}원
+              </div>
+            </div>
+          </div>
+
           <div className='flex flex-col mt-8 gap-4'>
             <button className='bg-black text-white rounded-md p-4'>
               장바구니
             </button>
             <button className='bg-white border border-gray-400 rounded-md p-4'>
-              위시리스트
+              구매하기
             </button>
           </div>
 
           <div className='mt-4'>
-            <p className='whitespace-pre-line'>{product?.description}</p>
+            <p className='whitespace-pre-line text-gray-700'>
+              {product?.description}
+            </p>
           </div>
         </div>
       </div>

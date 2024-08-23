@@ -14,14 +14,35 @@ const ProductAll = () => {
 
   const getProducts = async () => {
     const searchQuery = query.get('q') || ''
+    const searchCategory = query.get('category') || ''
 
     try {
-      const response = await axios.get(`${apiUrl}/products?q=${searchQuery}`)
+      let response
+      if (searchQuery === '' && searchCategory === '') {
+        response = await axios.get(`${apiUrl}/products`)
+      } else if (searchQuery) {
+        response = await axios.get(`${apiUrl}/products?q=${searchQuery}`)
+      } else {
+        response = await axios.get(
+          `${apiUrl}/products?category=${searchCategory}`
+        )
+      }
+
       const allProducts = response.data
 
-      const filteredProducts = searchQuery
-        ? allProducts.filter((product) => product.name.includes(searchQuery))
-        : allProducts
+      let filteredProducts
+
+      if (searchQuery) {
+        filteredProducts = allProducts.filter((product) =>
+          product.name.includes(searchQuery)
+        )
+      } else if (searchCategory) {
+        filteredProducts = allProducts.filter((product) =>
+          product.type.includes(searchCategory)
+        )
+      } else {
+        filteredProducts = allProducts
+      }
 
       setProducts(filteredProducts)
     } catch (error) {
@@ -36,9 +57,15 @@ const ProductAll = () => {
   return (
     <div className='flex justify-center'>
       <div className='max-w-[1280px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4'>
-        {products.map((product) => (
-          <ProductCard key={product.id} item={product} />
-        ))}
+        {products.length > 0 ? (
+          products.map((product) => (
+            <ProductCard key={product.id} item={product} />
+          ))
+        ) : (
+          <div className='col-span-full mt-4 text-2xl font-bold text-gray-700 text-center'>
+            <p>상품이 존재하지 않습니다.</p>
+          </div>
+        )}
       </div>
     </div>
   )

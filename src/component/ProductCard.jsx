@@ -12,7 +12,7 @@ const ProductCard = ({ item }) => {
       key={item.id}
       className={`min-w-[300px] border ${
         item.choice
-          ? 'border-pastel_blue shadow-lg shadow-pastel_blue transition-transform duration-300 transform'
+          ? 'border-pastel_pink shadow-lg shadow-pastel_pink transition-transform duration-300 transform'
           : 'border-gray-300'
       } rounded-lg overflow-hidden transition-shadow duration-300 bg-white cursor-pointer`}
       onClick={() => showProduct(item.id)}
@@ -28,7 +28,7 @@ const ProductCard = ({ item }) => {
         </h2>
         <div className='text-gray-600 text-sm'>
           <p className='truncate'>타입: {item.type}</p>
-          <p className='truncate'>대상: {item.target}</p>
+          <p className='truncate'>대상: {item.simple}</p>
         </div>
         <p className='text-gray-800 font-bold text-xl mt-2'>
           가격: {item.price} 원
