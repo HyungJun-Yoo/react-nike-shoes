@@ -58,7 +58,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
   return (
     <div>
-      <div className='flex flex-col p-4 bg-black shadow-md sm:flex-row sm:justify-between min-w-[350px]'>
+      <div className='flex flex-col p-4 bg-black shadow-md custom_sm:flex-row custom_sm:justify-between min-w-[350px]'>
         <div
           onClick={() => naviHome()}
           className='flex items-center relative cursor-pointer sm:justify-center'
@@ -68,7 +68,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             alt='Nike Logo'
             className='h-36 transition-transform duration-300 hover:scale-105'
           />
-          <h1 className='text-white text-3xl font-bold absolute left-[120px] sm:right-[-100px]'>
+          <h1 className='text-white text-3xl font-bold absolute left-[120px] custom_sm:right-[-100px]'>
             NIKE-SHOES
           </h1>
         </div>
@@ -79,7 +79,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           }
           className='flex items-center w-[120px]'
         >
-          <button className='hidden sm:flex sm:items-center bg-gray-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300'>
+          <button className='hidden custom_sm:flex custom_sm:items-center bg-gray-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300'>
             <FontAwesomeIcon icon={faUser} className='mr-2' />
             <span>{authenticate ? '로그아웃' : '로그인'}</span>
           </button>
@@ -123,7 +123,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           }
           className='flex items-center w-[120px]'
         >
-          <button className='flex items-center bg-gray-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 sm:hidden'>
+          <button className='flex items-center bg-gray-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 custom_sm:hidden'>
             <FontAwesomeIcon icon={faUser} className='mr-2' />
             <span>{authenticate ? '로그아웃' : '로그인'}</span>
           </button>

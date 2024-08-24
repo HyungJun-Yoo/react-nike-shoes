@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        custom_sm: '460px',
+      },
       colors: {
         pastel_blue: 'rgba(173, 216, 230, .9)',
         pastel_pink: 'rgba(255, 182, 193, .9)',
