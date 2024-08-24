@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
+import Loading from '/src/component/Loading'
 
 const apiUrl =
   process.env.NODE_ENV === 'production'
@@ -14,14 +15,19 @@ const ProductDetail = () => {
   const { id } = useParams()
   const [size, setSize] = useState(null)
   const [count, setCount] = useState(1)
+  const [loading, setLoading] = useState(false)
 
   const getProductDetail = async () => {
+    setLoading(true)
+
     try {
       const response = await axios.get(`${apiUrl}/products/${id}`)
       setProduct(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
+
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -44,7 +50,7 @@ const ProductDetail = () => {
     setCount((prev) => prev + 1)
   }
 
-  if (!product) return null
+  if (loading || !product) return <Loading />
 
   return (
     <div className='w-full flex justify-center'>

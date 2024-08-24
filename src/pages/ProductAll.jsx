@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ProductCard from '/src/component/ProductCard'
 import { useSearchParams } from 'react-router-dom'
+import Loading from '/src/component/Loading'
 
 const apiUrl =
   process.env.NODE_ENV === 'production'
@@ -10,9 +11,11 @@ const apiUrl =
 
 const ProductAll = () => {
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(false)
   const [query, setQuery] = useSearchParams()
 
   const getProducts = async () => {
+    setLoading(true)
     const searchQuery = query.get('q') || ''
     const searchCategory = query.get('category') || ''
 
@@ -48,11 +51,15 @@ const ProductAll = () => {
     } catch (error) {
       console.error('Error fetching data:', error)
     }
+
+    setLoading(false)
   }
 
   useEffect(() => {
     getProducts()
   }, [query])
+
+  if (loading) return <Loading />
 
   return (
     <div className='flex justify-center'>
