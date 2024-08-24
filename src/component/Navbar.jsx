@@ -44,7 +44,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
   }
 
   const handleSearch = () => {
-    navigate(`/?q=${searchKeyword}`)
+    searchKeyword ? navigate(`/?q=${searchKeyword}`) : navigate(`/?`)
     setSearchKeyword('')
     setSelectMenu('')
   }
