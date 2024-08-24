@@ -44,7 +44,7 @@ const Login = ({ setAuthenticate }) => {
                   message: '유효한 이메일 형식이 아닙니다.',
                 },
               })}
-              className={`flex-1 p-3 rounded-md text-lg ${
+              className={`w-full p-3 rounded-md text-lg ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder='example@domain.com'
@@ -70,7 +70,7 @@ const Login = ({ setAuthenticate }) => {
               {...register('password', {
                 required: '비밀번호를 입력해주세요.',
               })}
-              className={`flex-1 p-3 rounded-md text-lg ${
+              className={`w-full p-3 rounded-md text-lg ${
                 errors.password ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder='비밀번호를 입력하세요'

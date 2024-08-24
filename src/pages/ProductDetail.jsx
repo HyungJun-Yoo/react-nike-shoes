@@ -48,7 +48,7 @@ const ProductDetail = () => {
 
   return (
     <div className='w-full flex justify-center'>
-      <div className='w-full max-w-[1280px] flex flex-col md:flex-row p-4'>
+      <div className='w-full max-w-[1280px] flex flex-col md:flex-row p-1 sm:p-4'>
         <div className='flex-[0_0_35%] min-w-[350px]'>
           <img
             width={480}
@@ -58,9 +58,11 @@ const ProductDetail = () => {
             className='w-full h-auto object-cover mb-8 md:mb-1'
           />
         </div>
-        <div className='flex flex-col ml-4 gap-6 min-w-[410px]'>
+        <div className='flex flex-col sm:ml-4 sm:gap-6 min-w-[350px]'>
           <div className='flex flex-col justify-center items-center'>
-            <h1 className='text-3xl font-bold mb-2'>{product.name}</h1>
+            <h1 className='text-xl sm:text-2xl lg:text-3xl font-bold mb-2'>
+              {product.name}
+            </h1>
             <p className='text-lg text-gray-700'>{product.simple}</p>
             <p className='text-xl font-semibold'>
               {formatPrice(product.price)} 원
@@ -85,28 +87,28 @@ const ProductDetail = () => {
           </div>
 
           <div className='flex flex-col bg-gray-200 h-[200px] mt-8 gap-4 p-8'>
-            <div className='text-xl font-bold text-gray-600 mb-8'>
+            <div className='text-lg sm:text-xl font-bold text-gray-600 mb-8'>
               {product?.name}
             </div>
-            <div className='flex justify-between items-center p-4 border-b'>
+            <div className='flex justify-between items-center sm:p-4 border-b'>
               <div className='flex items-center space-x-2'>
                 <button
                   onClick={() => handleMinus()}
-                  className='flex items-center justify-center w-10 h-10 text-gray-600 hover:text-gray-800 border border-gray-400 rounded'
+                  className='w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:text-gray-800 border border-gray-400 rounded'
                 >
                   <FontAwesomeIcon icon={faMinus} />
                 </button>
-                <p className='w-20 h-10 flex items-center justify-center text-lg font-semibold border border-gray-400 rounded'>
+                <p className='w-14 h-7 sm:w-20 sm:h-10 flex items-center justify-center text-lg font-semibold border border-gray-400 rounded'>
                   {count}
                 </p>
                 <button
                   onClick={() => handlePlus()}
-                  className='flex items-center justify-center w-10 h-10 text-gray-600 hover:text-gray-800 border border-gray-400 rounded'
+                  className='w-7 h-7 sm:w-10 sm:h-10 flex items-center justify-center text-gray-600 hover:text-gray-800 border border-gray-400 rounded'
                 >
                   <FontAwesomeIcon icon={faPlus} />
                 </button>
               </div>
-              <div className='text-lg font-bold text-gray-800 ml-4'>
+              <div className='text-base sm:text-lg font-bold text-gray-800 ml-4'>
                 {formatPrice(product.price * count)}원
               </div>
             </div>
@@ -121,7 +123,7 @@ const ProductDetail = () => {
             </button>
           </div>
 
-          <div className='mt-4'>
+          <div className='mt-4 mb-3'>
             <p className='whitespace-pre-line text-gray-700'>
               {product?.description}
             </p>
