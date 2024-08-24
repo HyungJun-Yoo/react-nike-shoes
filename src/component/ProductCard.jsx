@@ -7,6 +7,10 @@ const ProductCard = ({ item }) => {
     navigate(`/product/${id}`)
   }
 
+  const formatPrice = (price) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
+
   return (
     <div
       key={item.id}
@@ -31,7 +35,7 @@ const ProductCard = ({ item }) => {
           <p className='truncate'>대상: {item.simple}</p>
         </div>
         <p className='text-gray-800 font-bold text-xl mt-2'>
-          가격: {item.price} 원
+          가격: {formatPrice(item.price)} 원
         </p>
       </div>
     </div>
