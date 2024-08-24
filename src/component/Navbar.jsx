@@ -58,7 +58,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
   return (
     <div>
-      <div className='flex flex-col p-4 bg-black shadow-md custom_sm:flex-row custom_sm:justify-between min-w-[350px]'>
+      <div className='flex flex-col p-2 sm:p-4 bg-black shadow-md custom_sm:flex-row custom_sm:justify-between min-w-[350px]'>
         <div
           onClick={() => naviHome()}
           className='flex items-center relative cursor-pointer sm:justify-center'
