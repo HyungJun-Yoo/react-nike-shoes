@@ -20,9 +20,7 @@ const Login = ({ setAuthenticate }) => {
 
   return (
     <div className='max-w-[1280px] mx-auto p-1 sm:p-8 bg-white'>
-      <h1 className='text-3xl font-bold mb-8 text-center text-black mt-4'>
-        로그인
-      </h1>
+      <h1 className='text-3xl font-bold mb-8 text-center text-black'>로그인</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className='bg-gray-200 shadow-md rounded-lg p-12 min-w-[350px]'
